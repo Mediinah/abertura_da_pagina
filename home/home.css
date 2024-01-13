@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    background-image: url('/home/imagens/fundo.jpg');
+    background-image: url('/home/imagens/matrix-356024.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Gradiente escuro com 50% de opacidade */
+    background: linear-gradient(rgba(12, 51, 6, 0.7), rgba(0, 0, 0, 0.7)); /* Gradiente escuro com 50% de opacidade */
     z-index: 1; /* Posiciona o gradiente sobre a imagem de fundo */
 }
 
@@ -51,12 +51,12 @@ body::before {
 
 @keyframes backgroundAnimation {
     0% {
-        top: 25%;
+        top: 20%;
         opacity: 0;
     }
 
     75% {
-        top: 25%;
+        top: 20%;
         opacity: 1;
     }
 
@@ -89,7 +89,7 @@ body::before {
     align-items: center;
     justify-content: center;
     opacity: 1; /* Opacidade inicial */
-    animation: maskAnimation 6s ease-in-out forwards; /* Animação da máscara */
+    animation: maskAnimation 5.9s ease-in-out forwards; /* Animação da máscara */
 }
 
 @keyframes maskAnimation {
@@ -170,7 +170,7 @@ a {
 }
 
 a:hover {
-    color: rgb(48, 212, 43);
+    color: rgb(38, 3, 238);
 }
 
 ul{
@@ -181,7 +181,7 @@ ul li {
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.2rem;
-    color: rgb(48, 212, 43);
+    color: rgb(189, 184, 157);
 
     max-width: 25.7rem;
 
@@ -200,7 +200,7 @@ ul li span {
 
     letter-spacing: -2px;
 
-    color: rgb(48, 212, 43);
+    color: rgb(224, 230, 153);
 }
 
 @media (min-width: 700px) {
