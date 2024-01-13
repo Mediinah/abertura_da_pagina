@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Introdução à Responsividade</title>
+</head>
+
+<body>
+    <div class="mask" id="mask"></div>
+    <!-- Logo Container -->
+    <div class="background-image">
+        <div class="logo-container" id="logoContainer">
+            <img src="imagens/logo.png" alt="Logo" class="fullscreen-logo" id="fullscreenLogo">
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="content-container" id="contentContainer">
+        <main class="content" id="content">
+            <div>
+                <p>Nosso Trabalho</p>
+                <h1>Fazemos projetos para mobile e web</h1>
+                <p>Se você tem uma grande ideia inovadora e que vai transformar vidas, coloque em prática agora com a gente.</p>
+                <a href="#">Saiba mais</a>
+            </div>
+            <ul>
+                <li><span>1</span> Experiência do usuário</li>
+                <li><span>2</span> Pagamentos no aplicativo</li>
+                <li><span>3</span> Suporte 24h todos os dias</li>
+            </ul>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Aguarde um pouco mais (por exemplo, 3 segundos) e oculte completamente a máscara
+            setTimeout(function () {
+                document.getElementById("mask").style.display = "none";
+            }, 6000);
+        });
+        
+
+
+    </script>
+</body>
+
+</html>

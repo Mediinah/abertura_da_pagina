@@ -1,0 +1,228 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url('/home/imagens/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative; /* Necessário para posicionar o gradiente sobre a imagem */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Gradiente escuro com 50% de opacidade */
+    z-index: 1; /* Posiciona o gradiente sobre a imagem de fundo */
+}
+
+
+.background-image {
+
+
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5000;
+    opacity: 0;
+    animation: backgroundAnimation 4.5s ease-in-out forwards;
+}
+
+.fullscreen-logo,
+.background-image {
+    width: auto;
+    height: auto;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+
+@keyframes backgroundAnimation {
+    0% {
+        top: 25%;
+        opacity: 0;
+    }
+
+    75% {
+        top: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        top: -80%;
+        opacity: 1;
+    }
+}
+
+
+
+
+.fullscreen-logo-container.visible,.mask,
+.background-image.visible {
+    opacity: 0;
+
+}
+
+
+
+.mask {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Cor da máscara */
+    z-index: 1000; /* Z-index alto para garantir que a máscara esteja sobre o conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1; /* Opacidade inicial */
+    animation: maskAnimation 6s ease-in-out forwards; /* Animação da máscara */
+}
+
+@keyframes maskAnimation {
+    0% {
+        top: 0%;
+    }
+
+    
+    50% {
+        top: 0%;    
+    }
+
+    100% {
+        top: -350%;
+        
+    }
+}
+
+
+.content {
+    position: relative;
+    z-index: 1; /* Certifica-se de que o conteúdo esteja acima da máscara */
+    padding: 20px;
+    color: #fff; /* Cor do texto no conteúdo */
+}
+
+
+
+main{
+    max-width: 33.0rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+
+    color: #c7c2df;
+
+    margin-bottom: 1.5rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+main p:first-child{
+    color: rgb(48, 212, 43);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 3.2rem;
+
+    margin-bottom: 1.7rem;
+}
+
+h1 + p {
+    color: #c7c2df;
+    line-height: 3.2rem;
+    font-size: 20px;
+    margin-bottom: 3.2rem;
+}
+
+a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(48, 212, 43);
+}
+
+ul{
+    margin-top: 7.2rem;
+}
+
+ul li {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: rgb(48, 212, 43);
+
+    max-width: 25.7rem;
+
+    display: flex;
+    gap: 3.8rem;
+}
+
+ul li + li {
+    margin-top: 3.2rem;
+}
+
+ul li span {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 8.0rem;
+
+    letter-spacing: -2px;
+
+    color: rgb(48, 212, 43);
+}
+
+@media (min-width: 700px) {
+    
+    body {
+        padding-top: 8rem;
+    }
+    
+    main {
+        max-width: 1020px;
+        display: flex;
+        gap: 10rem;    
+    }
+
+main > div {
+    max-width: 484px;
+}
+
+ul li{
+grid-auto-flow: 5.3rem;
+max-width: 450px;
+align-items: center;
+}
+
+}
